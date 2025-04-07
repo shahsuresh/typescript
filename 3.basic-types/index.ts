@@ -113,3 +113,58 @@ const enum Yes {
 }
 
 //! unknown type
+//  the 'unknown' type represents any value, just like 'any',
+// but is safer because you must perform type checking before using it.
+
+//example
+
+let result: unknown;
+if (typeof result == "number") {
+  result.toFixed(2);
+} else if (typeof result == "string") {
+  result.length;
+} else {
+  console.log(result);
+}
+
+//example 2
+function handleData(data: unknown) {
+  if (typeof data === "number") {
+    console.log(data.toFixed(2));
+  } else {
+    console.log("Not a number");
+  }
+}
+
+//! never type
+//The never type in TypeScript represents values that never occur.
+//  It's used in functions that either:
+
+//1. Throw an error, or
+
+//2. Run infinitely (never return), or
+
+//3. Are exhaustive checks (in switch statements, for example).
+
+//example: function that throws error
+function throwError(message: string): never {
+  throw new Error(message);
+}
+
+//example: function that run infinite loop
+function infiniteLoop(): never {
+  while (true) {
+    // do something forever
+  }
+}
+
+//! void type
+//The void type in TypeScript is used to indicate that
+//  a function does not return a value.
+
+function logMessage(message: string): void {
+  console.log(message);
+}
+
+//In this example, the function performs a side effect (logging),
+// but doesn’t return anything—so the return type is void.
