@@ -74,13 +74,15 @@ let studentName_roll: [string, number] = ["Adatiya", 32];
 studentName_roll.push(50);
 console.log("Student With Roll Number", studentName_roll); // Doesnot show Error, this is drawback of tuples in TS
 
-//Tuple with Optional Elements
+//# Tuple with Optional Elements
+
 let userInfo: [string, number?];
 
 userInfo = ["Bob"]; // ✅ OK
 userInfo = ["Bob", 30]; // ✅ OK
 
-//  Tuple with Rest Elements
+//#  Tuple with Rest Elements
+
 let scores: [string, ...number[]];
 
 scores = ["Math", 90, 85, 100]; // ✅ OK
@@ -88,6 +90,7 @@ scores = ["Math", 90, 85, 100]; // ✅ OK
 //! Enum
 // Enums in TypeScript are a way to define named constants
 // — perfect when you want to represent a set of related values with friendly names.
+
 enum statusCode {
   success = "SUCCESS",
   pending = "PENDING",
@@ -138,15 +141,14 @@ function handleData(data: unknown) {
 
 //! never type
 //The never type in TypeScript represents values that never occur.
+
 //  It's used in functions that either:
-
 //1. Throw an error, or
-
 //2. Run infinitely (never return), or
-
 //3. Are exhaustive checks (in switch statements, for example).
 
 //example: function that throws error
+
 function throwError(message: string): never {
   throw new Error(message);
 }
