@@ -65,10 +65,10 @@ class YetiAir extends Plane {
 }
 
 const yeti1 = new YetiAir("Shree Air");
-console.log(yeti1.planeRoute());
+console.log(yeti1.planeRoute()); // It is a domestic plane
 
 const himalayanAir = new Plane("Himalayan Air");
-console.log(himalayanAir.planeRoute());
+console.log(himalayanAir.planeRoute()); //it is a Himalayan Air plane
 
 //! Abstract Class
 //  An abstract class is a class that cannot be instantiated directly.
