@@ -10,4 +10,4 @@ interface Laptop {
 
 type laptopKeys = keyof Laptop;
 let laptop1: laptopKeys = "model";
-console.log(laptop1);
+console.log(laptop1); //model
