@@ -2,6 +2,14 @@
 // properties or methods that belong to the class itself rather than
 // to any instance of the class.
 
+//? We need not to create an object of a class to access
+//  any properties or methods of a class, if the property or method
+// inside that class is static.
+
+//example
+console.log(Math.random()); // here Math is a class and random() is a static
+// method inside class 'Math'
+
 // # Static property: Shared across all instances.
 
 // # Static method: Called on the class, not on an instance.
